@@ -101,7 +101,7 @@ ID,Category,Name,Method,MethodArgument,RegistryPath,RegistryItem,ClassName,Names
 2.3.10.1,"Security Options","Network access: Allow anonymous SID/Name translation",secedit,"System Access\LSAAnonymousNameLookup",,,,,,0,0,=,Medium
 2.3.10.2,"Security Options","Network access: Do not allow anonymous enumeration of SAM accounts (Member)",Registry,,HKLM:\System\CurrentControlSet\Control\Lsa,RestrictAnonymousSAM,,,,1,1,=,Medium
 2.3.10.3,"Security Options","Network access: Do not allow anonymous enumeration of SAM accounts and shares (Member)",Registry,,HKLM:\System\CurrentControlSet\Control\Lsa,RestrictAnonymous,,,,0,1,=,Medium
-2.3.10.4,"Security Options","Network access: Do not allow storage of passwords and credentials for network authentication",Registry,,HKLM:\System\CurrentControlSet\Control\Lsa,DisableDomainCreds,,,,0,1,=,Medium
+2.3.10.4,"Security Options","Network access: Do not allow storage of passwords and credentials for network authentication",Registry,,HKLM:\System\CurrentControlSet\Control\Lsa,DisableDomainCreds,,,,1,1,=,Medium
 2.3.10.5,"Security Options","Network access: Let Everyone permissions apply to anonymous users",Registry,,HKLM:\System\CurrentControlSet\Control\Lsa,EveryoneIncludesAnonymous,,,,0,0,=,Medium
 2.3.10.6,"Security Options","Network access: Named Pipes that can be accessed anonymously (DC)",Registry,,HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters,NullSessionPipes,,,,,netlogon;samr;lsarpc,=,Medium
 2.3.10.7,"Security Options","Network access: Named Pipes that can be accessed anonymously (Member)",Registry,,HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters,NullSessionPipes,,,,,,=,Medium
@@ -117,10 +117,10 @@ ID,Category,Name,Method,MethodArgument,RegistryPath,RegistryItem,ClassName,Names
 2.3.11.4,"Security Options","Network security: Configure encryption types allowed for Kerberos",Registry,,HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters,SupportedEncryptionTypes,,,,2147483644,2147483640,<=,Medium
 2.3.11.5,"Security Options","Network security: Do not store LAN Manager hash value on next password change",Registry,,HKLM:\System\CurrentControlSet\Control\Lsa,NoLMHash,,,,1,1,=,High
 2.3.11.6,"Security Options","Network security: Force logoff when logon hours expires",secedit,"System Access\ForceLogoffWhenHourExpire",,,,,,0,1,=,Low
-2.3.11.7,"Security Options","Network security: LAN Manager authentication level",Registry,,HKLM:\System\CurrentControlSet\Control\Lsa,LmCompatibilityLevel,,,,3,5,=,Medium
+2.3.11.7,"Security Options","Network security: LAN Manager authentication level",Registry,,HKLM:\System\CurrentControlSet\Control\Lsa,LmCompatibilityLevel,,,,5,5,=,Medium
 2.3.11.8,"Security Options","Network security: LDAP client signing requirements",Registry,,HKLM:\System\CurrentControlSet\Services\LDAP,LDAPClientIntegrity,,,,1,1,>=,Medium
-2.3.11.9,"Security Options","Network security: Minimum session security for NTLM SSP based (including secure RPC) clients",Registry,,HKLM:\System\CurrentControlSet\Control\Lsa\MSV1_0,NTLMMinClientSec,,,,536870912,537395200,=,Medium
-2.3.11.10,"Security Options","Network security: Minimum session security for NTLM SSP based (including secure RPC) servers",Registry,,HKLM:\System\CurrentControlSet\Control\Lsa\MSV1_0,NTLMMinServerSec,,,,536870912,537395200,=,Medium
+2.3.11.9,"Security Options","Network security: Minimum session security for NTLM SSP based (including secure RPC) clients",Registry,,HKLM:\System\CurrentControlSet\Control\Lsa\MSV1_0,NTLMMinClientSec,,,,537395200,537395200,=,Medium
+2.3.11.10,"Security Options","Network security: Minimum session security for NTLM SSP based (including secure RPC) servers",Registry,,HKLM:\System\CurrentControlSet\Control\Lsa\MSV1_0,NTLMMinServerSec,,,,537395200,537395200,=,Medium
 2.3.13.1,"Security Options","Shutdown: Allow system to be shut down without having to log on",Registry,,HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System,ShutdownWithoutLogon,,,,1,0,=,Medium
 2.3.15.1,"Security Options","System objects: Require case insensitivity for non-Windows subsystem",Registry,,"HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Kernel",ObCaseInsensitive,,,,1,1,=,Medium
 2.3.15.2,"Security Options","System objects: Strengthen default permissions of internal system objects (e.g. Symbolic Links)",Registry,,"HKLM:\System\CurrentControlSet\Control\Session Manager",ProtectionMode,,,,1,1,=,Medium
